@@ -6,7 +6,7 @@ x-logging: &logging
 
 services:
   postgres:
-    image: "postgres:${POSTGRES_VERSION:?err}"
+    image: "postgres:${POSTGRES_VERSION}"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "infra"]
