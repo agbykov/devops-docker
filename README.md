@@ -1,2 +1,3 @@
 # jira-confluence-compose
-jira-confluence-compose
+
+Compose based env
