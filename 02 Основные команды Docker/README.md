@@ -49,11 +49,11 @@ sudo docker rm --force ID
   <summary>Решение задания</summary>
 
 1. `sudo docker pull grafana/grafana`
-2. `sudo docker run grafana/grafana`
+2. `sudo docker run -d grafana/grafana`
    1. `sudo docker ps -a`
    2. `sudo docker logs ID`
    3. `sudo docker rm --force ID`
-3. `sudo docker run -p 3000:3000 grafana/grafana` в браузере открыть `localhost:3000`
+3. `sudo docker run -d -p 3000:3000 grafana/grafana` в браузере открыть `localhost:3000`
    1. `sudo docker rm --force ID`
    2. `sudo docker system prune -a -f --volumes`
 
