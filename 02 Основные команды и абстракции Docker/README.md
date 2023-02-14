@@ -26,5 +26,9 @@ sudo docker rm --force ID
 
 > Чтобы удалить все остановленные контейнеры и очистить неиспользуемые виртуальные диски которые создал докер, выполните команду `docker system prune -a -f --volumes`
 
+### Полезные ссылки
+
+- Список всех комманд для работы с образами и запущенными контейнерами `docker` https://docs.docker.com/engine/reference/commandline/cli/
+
 Команды управления контейнерами, образами (run, rm, push и т.д.).
 Registry, Docker Daemon, Container, Image, Dockerfile и их взаимодействие.
