@@ -57,6 +57,3 @@ sudo docker rm --force ID
    2. `sudo docker system prune -a -f --volumes`
 
 </details>
-
-Команды управления контейнерами, образами (run, rm, push и т.д.).
-Registry, Docker Daemon, Container, Image, Dockerfile и их взаимодействие.
