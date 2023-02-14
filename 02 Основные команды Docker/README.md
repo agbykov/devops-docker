@@ -45,7 +45,7 @@ sudo docker rm --force ID
    2. Удалить все локальные образы и очистить место на диске
 
 <details>
-  <summary>Решение второго задания</summary>
+  <summary>Решение задания</summary>
 
 1. `sudo docker pull grafana/grafana`
 2. `sudo docker run grafana/grafana`
