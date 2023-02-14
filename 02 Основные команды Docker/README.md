@@ -33,5 +33,12 @@ sudo docker rm --force ID
 
 - Список всех комманд для работы с образами и запущенными контейнерами `docker` https://docs.docker.com/engine/reference/commandline/cli/
 
+### Задание по уроку
+
+1. Запустить контейнер Grafana
+   1. Проверить запустился ли контейнер
+   2. Посмотреть логи контейнера (история его работы)
+   3. 
+
 Команды управления контейнерами, образами (run, rm, push и т.д.).
 Registry, Docker Daemon, Container, Image, Dockerfile и их взаимодействие.
