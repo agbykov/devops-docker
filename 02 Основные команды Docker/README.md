@@ -35,13 +35,28 @@ sudo docker rm --force ID
 
 ### Задание по уроку
 
-1. Запустить контейнер Grafana
+1. Скачать image `grafana/grafana`
+2. Запустить контейнер Grafana
    1. Проверить запустился ли контейнер
    2. Посмотреть логи контейнера (история его работы)
    3. Убить контейнер
-2. Запустить тот же контейнер с Grafana только пробросить порт 3000 на локальный хост из контейнера чтобы иметь возхможность работать в браузере с приложением
+3. Запустить тот же контейнер с Grafana только пробросить порт 3000 на локальный хост из контейнера чтобы иметь возхможность работать в браузере с приложением
    1. Убить контейнер
    2. Удалить все локальные образы и очистить место на диске
+
+<details>
+  <summary>Решение второго задания</summary>
+
+1. `sudo docker pull grafana/grafana`
+2. `sudo docker run grafana/grafana`
+   1. `sudo docker ps -a`
+   2. `sudo docker logs ID`
+   3. `sudo docker rm --force ID`
+3. `sudo docker run -p 3000:3000 grafana/grafana` в браузере открыть `localhost:3000`
+   1. `sudo docker rm --force ID`
+   2. `sudo docker system prune -a -f --volumes`
+
+</details>
 
 Команды управления контейнерами, образами (run, rm, push и т.д.).
 Registry, Docker Daemon, Container, Image, Dockerfile и их взаимодействие.
