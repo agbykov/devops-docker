@@ -53,7 +53,7 @@ ENTRYPOINT ["/app/script.sh"]
 
 Файл с инструкциями создан, теперь соберем из него наш первый image, это делается командой
 ```sh
-docker build --tag myfistapp:1.0.0 - < Dockerfile
+cat Dockerfile | docker build --tag myfirstapp:1.0.0 .
 ```
 
 Которая соберет нам образ `myfistapp` версии `1.0.0` следуя инструкциям из нашего `Dockerfile`
