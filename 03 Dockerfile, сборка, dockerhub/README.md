@@ -46,7 +46,7 @@ WORKDIR /app
 
 COPY ./script.sh /app/script.sh
 
-RUN chmod +x script.sh
+RUN chmod u+x script.sh
 
 ENTRYPOINT ["/app/script.sh"]
 ```
