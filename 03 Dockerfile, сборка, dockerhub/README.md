@@ -56,4 +56,4 @@ ENTRYPOINT ["/app/script.sh"]
 docker build --tag myfistapp:1.0.0 - < Dockerfile
 ```
 
-Которая соберет нам образ `myfistapp` версии `1.0.0` следуюя инструкциям из нашего `Dockerfile`
+Которая соберет нам образ `myfistapp` версии `1.0.0` следуя инструкциям из нашего `Dockerfile`
