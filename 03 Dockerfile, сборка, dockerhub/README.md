@@ -48,7 +48,7 @@ COPY ./script.sh /app/script.sh
 
 RUN chmod u+x script.sh
 
-ENTRYPOINT ["/app/script.sh"]
+CMD ["/app/script.sh"]
 ```
 
 Файл с инструкциями создан, теперь соберем из него наш первый image, это делается командой
