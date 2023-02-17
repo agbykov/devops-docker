@@ -71,6 +71,6 @@ docker run --rm myfirstapp:1.0.0
 1. Регистрируемся в https://hub.docker.com/ и создаем репозиторий `myfirstapp` где будут храниться наши образы
    > Например вот репозиторий с images от Ubuntu: https://hub.docker.com/_/ubuntu
 2. Выполняем вход в аккаунт локально в docker: `docker login --username=ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ --email=АДРЕСС_ПОЧТЫ_ПРИ_РЕГИСТРАЦИИ`
-2. Создаем тег нашего образа `docker tag myfirstapp:1.0.0 ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp:1.0.0`, например для меня это `docker tag myfirstapp:1.0.0  eabykov/myfirstapp:1.0.0` (потому что такое требование от DockerHub)
+2. Создаем тег нашего образа `docker tag myfirstapp:1.0.0 ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp:1.0.0`, например для меня это `docker tag myfirstapp:1.0.0 eabykov/myfirstapp:1.0.0` (потому что такое требование от DockerHub)
 3. Выполняем команду `docker image push ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp:1.0.0` которая загрузит наш образ в DockerHub
    - страница нашего образа в DockerHub: `https://hub.docker.com/r/ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp` (например для меня это https://hub.docker.com/r/eabykov/myfirstapp )
