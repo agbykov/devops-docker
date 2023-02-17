@@ -69,4 +69,8 @@ docker run --rm myfirstapp:1.0.0
 Когда мы пытаемся запустить например mineraft в docker контейнере, docker будет в первую очередь искать, есть ли image для minecraft у нас локально, а потом если не найдет в DockerHub и если там есть, то скачает его и только тогда запустит
 
 1. Создаем аккаунт: https://hub.docker.com/ 
-2. 
+2. Логинимся у себя в консоли через команду `docker login --username=ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ --email=АДРЕСС_ПОЧТЫ_ПРИ_РЕГИСТРАЦИИ`
+2. DockerHub требует чтобы образы имели имя вида `ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/ИМЯ_DOCKER_ОБРАЗА:ВЕРСИЯ`
+   1. Создаем тег нашего образа `docker tag myfirstapp:1.0.0 ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp:1.0.0`, например для меня это `docker tag myfirstapp:1.0.0  eabykov/myfirstapp:1.0.0`
+3. Выполняем команду `docker image push ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp:1.0.0` которая загрузит наш образ в DockerHub
+   - страница нашего образа в DockerHub: https://hub.docker.com/r/ИМЯ_ВАШЕГО_ПОЛЬЗОВАТЕЛЯ_В_DOCKERHUB/myfirstapp (например для меня это https://hub.docker.com/r/eabykov/myfirstapp )
