@@ -43,6 +43,10 @@ Volumes (тома) - используются для хранения данны
 services:
   postgres:
     image: "postgres:14.7-alpine"
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: mydbuser
+      POSTGRES_PASSWORD: mydbpassword
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
 ```
