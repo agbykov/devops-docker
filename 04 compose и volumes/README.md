@@ -40,9 +40,25 @@ services:
 Volumes (тома) - используются для хранения данных которые создает или использует приложение запущенное как docker comtainer
 
 - `docker volume ls` - посмотреть список существующих volumes
-- `docker volume inspect ИМЯ_ТОМА` - посмотреть информацию о volume
+- `docker volume inspect ИМЯ_ТОМА` - посмотреть информацию о volume, самое интересное тут `Mountpoint` - выводится путь где хранятся данные локально на машине
 
-> Есть еще `docker volume create ИМЯ_ТОМА` но обычно их автоматически создает compose или другие инструменты с помощью которых мы запускаем контейнеры
+> Можно еще создать том с помощью `docker volume create ИМЯ_ТОМА` но обычно их автоматически создает compose или другие инструменты с помощью которых мы запускаем контейнеры
+
+```yaml
+services:
+  postgres:
+    image: "postgres:14.7-alpine"
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: mydbuser
+      POSTGRES_PASSWORD: mydbpassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  myapp:
+```
+
+Лучше хранить данные в той же папке где запускаем compose не создавая дополнительно виртуальный том в docker
 
 ```yaml
 services:
