@@ -1,4 +1,4 @@
-### Docker Compose
+### Compose, команда `docker compose`
 
 Compose - это утилита для простого запуска нескольких docker контейнеров вместе
 
