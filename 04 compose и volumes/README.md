@@ -79,7 +79,3 @@ services:
 
 В секции volumes (томов) указали что в той же папке что запускаем compose мы хотим предоставить доступ к папке `postgres_data` (создаст ее если ее нет) внутрь контейнера по пути `/var/lib/postgresql/data` (путь где postgres сохраняет данные по умолчанию)
 > Postgres при создании базы `mydb` сохранит данные в папку `/var/lib/postgresql/data` и когда мы убьем контейнер, все что занесено в папку останется у нас на компьютере в папке `postgres_data` которая находится там же, где мы запускали `docker compose up -d`
-
-Занесем данные в базу postgres с помощью команд:
-
-- `docker compose exec postgres psql -U mydbuser -d mydb` для доступа к postgres внутри контейнера
